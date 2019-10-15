@@ -1,0 +1,35 @@
+<div class = "container main-container">
+      <a class = "link" routerLink = "/member/add-benefit">ajouter un bien/service</a>
+</div>
+
+<div class = "left">
+  <div class="container">
+      <div class = "title">Mes biens</div>
+  </div>
+  <div class = "container secondary-container" *ngFor="let x of mes_biens; let i = index">
+    <div >
+      <h3> <strong>nom : </strong> {{mes_biens[i].nom}}</h3>
+      <h3> <strong>description : </strong> {{mes_biens[i].descriptif}} </h3>
+      <h3> <strong>prix : </strong> {{mes_biens[i].PrixNeuf}} </h3>
+    </div>
+    <div>
+        <a class ="submit" routerLink="/member/my-benefits" (click) = "deleteBenefit(mes_biens[i].idBien, 'bien')"> supprimer</a>
+    </div>
+  </div>
+</div>
+
+<div class = "right">
+  <div class="container">
+      <div class = "title">Mes services</div>
+  </div>
+  <div class = "container secondary-container" *ngFor="let x of mes_services; let i = index">
+    <div >
+      <h3> <strong>nom : </strong>{{mes_services[i].nom}}</h3>
+      <h3> <strong>description : </strong>{{mes_services[i].descriptif}}</h3>
+      <h3> <strong>prix : </strong>{{mes_services[i].PrixNeuf}}</h3>
+    </div>
+    <div>
+        <a class ="submit" routerLink="/member/my-benefits" (click) = "deleteBenefit(mes_services[i].idService, 'service')"> supprimer</a>
+    </div>
+  </div>
+</div>

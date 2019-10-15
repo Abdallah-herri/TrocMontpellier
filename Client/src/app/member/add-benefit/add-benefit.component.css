@@ -1,0 +1,73 @@
+*
+{
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+body
+{
+    padding: 0 20px 0 20px;
+}
+
+.container
+{
+  width : 50%;
+  margin: 30px 25% 0 25%;
+  border-radius: 1px;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #e5e6e8;
+  overflow: auto;
+}
+
+input
+{
+    width: 98%;
+    margin: 5px 0 15px 0;
+}
+
+select
+{
+  width: 98%;
+  margin: 5px 0 15px 0;
+}
+
+textarea
+{
+  width: 98%;
+  margin: 5px 0 15px 0;
+  border-radius: 5px;
+  resize: none;
+}
+
+.title
+{
+  margin: 80px 0 0 25%;
+  font-size: 25px;
+}
+
+.warning
+{
+  background-color: #fc5d5d;
+  padding: 5px 0 5px 15px;
+}
+
+input[type = submit]
+{
+  width: 100px;
+}
+
+.left
+{
+  width: 48%;
+  float: left;
+  clear: left;
+  margin-right: 1%
+}
+
+.right
+{
+  width: 48%;
+  float: right;
+  clear: right;
+  margin-left: 1%;
+}

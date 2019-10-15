@@ -1,0 +1,44 @@
+*
+{
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+
+.container
+{
+  margin: 10px;
+  border-radius: 1px;
+  padding: 20px;
+  overflow: auto;
+}
+
+.title
+{
+  font-size: 25px;
+  float: left;
+}
+
+.element
+{
+  float: left;
+  padding-right: 30px;
+  background-color: inherit;
+  width: inherit;
+}
+
+.main-container
+{
+  padding-bottom: 0px;
+}
+
+.secondary-container
+{
+  background-color: #e5e6e8;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.submit
+{
+  float: right;
+  margin-right: 20px;
+}

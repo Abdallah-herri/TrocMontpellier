@@ -1,0 +1,17 @@
+<div class = "container">
+  <form (submit)="registerUser($event)">
+    <input type="text" placeholder="Nom" id="fname">
+    <input type="text" placeholder="Prenom" id="lname">
+    <input type="text" placeholder="Adresse" id="adresse">
+    <input type="email" placeholder="Email" id="email_m">
+    <input type="number" placeholder="Télephone" id="tel">
+    <input type="password" placeholder="password" id="password_m">
+    <input type="submit" value="submit">
+  </form>
+  <div class="warning" *ngIf = " isEmpty == true">
+    veuillez remplir tous les champs
+  </div>
+  <div class="warning" *ngIf = " wronginfos == true">
+    email existe deja
+  </div>
+</div>

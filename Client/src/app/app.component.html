@@ -1,0 +1,14 @@
+<div>
+  <div class = "header" *ngIf = "getIsConnected() == false">
+    <a class = "link" routerLink = "/member">connecter/s'inscrire</a>
+  </div>
+  <div class = "header" *ngIf = "getIsConnected() == true">
+    <a class = "link" routerLink = "" (click) = "logout()">déconnecter</a>
+    <a class = "link" routerLink = "/member/my-benefits">mes biens/services</a>
+    <a class = "link" routerLink = "/member">profil</a>
+    <a class = "link" routerLink = "">chercher</a>
+  </div>
+
+  <a class = "logo" routerLink = ""> <h2>AlloVoisin</h2></a>
+</div>
+<router-outlet></router-outlet>

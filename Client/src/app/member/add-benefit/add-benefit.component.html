@@ -1,0 +1,39 @@
+<body>
+  <form (submit)="addBenefit($event)">
+    <div class = "title"> Ajouter un bien/service </div>
+    <div class = "container">
+      <label> Type : </label>
+      <select id="type">
+          <option value="bien">Bien</option>
+          <option value="service">Service</option>
+      </select>
+      <input type="text" placeholder="Nom" id="name" rows="5" required>
+      <textarea placeholder="Descriptif" id="decription"></textarea>
+      <input type="number" placeholder="Prix" id="price" min="1" max="1000"required>
+      <input type="text" placeholder="mots clef" id="mots_clefs">
+
+
+    <div class="warning" *ngIf = " isEmpty == true">
+      veuillez remplir tous les champs
+    </div>
+    </div>
+    <div class = "title"> Disponibiltés : </div>
+      <div class = "container">
+        <input class ="left" type="button" (click) = "adddisponibility()" value="ajouter">
+        <input class = "right" type="button" (click) = "removedisponibility()" value="supprimer">
+        <p *ngFor="let x of disponibilites; let i = index">
+          <input class = "left"  type="date" [(ngModel)]="disponibilites[i].date"  [ngModelOptions]="{standalone: true}">
+          <input class = "right" type="time" [(ngModel)]="disponibilites[i].heure" [ngModelOptions]="{standalone: true}">
+        </p>
+
+        <input type="submit" value="submit">
+        <div class="warning" *ngIf = " isDispo == true">
+          veuillez au moins ajouter une disponibilité
+        </div>
+      </div>
+      <div class="container warning" *ngIf = " success == false">
+        Une erreur est survenu
+      </div>
+
+  </form>
+</body>

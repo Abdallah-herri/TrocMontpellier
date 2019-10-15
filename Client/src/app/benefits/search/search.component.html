@@ -1,0 +1,53 @@
+<body>
+  <div class = "title"> Chercher un bien/service </div>
+  <div class = "container">
+      <form (submit)="searchBenefit($event)">
+        <div class = "element">
+          Type :
+          <select id="type">
+              <option value="bien">Bien</option>
+              <option value="service">Service</option>
+          </select>
+        </div>
+        <div class = "element">
+          Date :
+          <input type="date" id="date_emprunt" required>
+        </div>
+        <div class = "element">
+            Mots clefs :
+          <input type="text" placeholder="ajouter mot clé" id="mot_clef" required>
+        </div>
+        <input class ="submit" type="submit" value="chercher">
+      </form>
+      <div *ngIf = " isEmpty == true">
+        veuillez remplir tous les champs
+      </div>
+  </div>
+
+  <div class = "title"> Resultats de la recherche</div>
+
+  <div *ngFor="let x of liste; let i = index">
+    <div *ngIf = "liste[i].disponibilites != ''">
+      <div class = "container" >
+      <h1>{{liste[i].nom_m}} {{liste[i].prenom_m}}</h1>
+      <h3> <strong>nom : </strong> {{liste[i].nom}}</h3>
+      <h3> <strong>description : </strong> {{liste[i].description}} </h3>
+      <h3> <strong>prix : </strong> {{liste[i].prixNeuf}} </h3>
+      <h3> <strong>Mots clefs : </strong> {{liste[i].mots_clefs}} </h3>
+
+    <form (submit)="reserver($event)">
+      <input type="hidden" id="id" value="{{liste[i].idBienOuService}}">
+      <input type="hidden" id="type" value="{{liste[i].bienOuService}}">
+      <select *ngFor = "let y of liste[i].disponibilites; let j = index" id = "id_dispo">
+        <option *ngIf = "liste[i].disponibilites[j].isReserved == 0" value = "{{liste[i].disponibilites[j].idDisponibilite}}">{{liste[i].disponibilites[j].date}} à {{liste[i].disponibilites[j].heure}}</option>
+      </select>
+     <input *ngIf = "getIsConnected() == true" class ="submit" type="submit" value="choisir">
+    </form>
+    </div>
+    </div>
+  </div>
+
+  <div class = "container "*ngIf = "noResults == true">
+    il n'y a aucun element avec ses criters
+  </div>
+</body>

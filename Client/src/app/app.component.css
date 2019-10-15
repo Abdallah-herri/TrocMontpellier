@@ -1,0 +1,32 @@
+*
+{
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.container
+{
+  overflow: auto;
+}
+
+a
+{
+  text-decoration: none;
+  color : black;
+  font-size: 20px;
+}
+
+a:hover
+{
+  color: red;
+}
+
+.header
+{
+  float: right;
+}
+
+.link
+{
+  float: right;
+  margin-right: 15px;
+}

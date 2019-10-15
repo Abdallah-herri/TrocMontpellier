@@ -1,0 +1,24 @@
+[
+  {
+      "idmembre" : "1",
+      "nom" : "herri",
+      "prenom" : "abdallah",
+      "adresse" : "triolet",
+      "tel" : "012345678",
+      "email" : "abdellah@gmail.com",
+      "tel" : "1",
+      "password" : "1234",
+      "type" : "membre"
+  },
+  {
+      "idmembre" : "2",
+      "nom" : "herri",
+      "prenom" : "oussama",
+      "adresse" : "triolet",
+      "tel" : "012345678",
+      "email" : "oussama@gmail.com",
+      "tel" : "1",
+      "password" : "1",
+      "type" : "membre"
+  }
+]

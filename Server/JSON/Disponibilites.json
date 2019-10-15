@@ -1,0 +1,13 @@
+[
+	{
+		"idBienOuService" : "2",
+		"bienOuService" : "bien",
+		"disponibilites" : [{
+			"idDisponibilite" : 2,
+			"date": "",
+			"heure": "",
+			"isReserved" : "0"
+			}]
+
+	}
+]

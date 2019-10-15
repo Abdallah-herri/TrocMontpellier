@@ -1,0 +1,15 @@
+<div class = "container">
+  <div *ngIf = "getIsConnected() == false">
+    <div class = "left">
+      <h2>Login</h2>
+      <app-login></app-login>
+    </div>
+    <div class = "right">
+      <h2>Register</h2>
+      <app-register></app-register>
+    </div>
+  </div>
+  <div *ngIf = "getIsConnected() == true">
+    <app-profil></app-profil>
+  </div>
+</div>

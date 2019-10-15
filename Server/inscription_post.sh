@@ -1,0 +1,1 @@
+curl --header "Content-type: application/json" -X POST --data '{"email":"claire.delune@gmail.com", "mdp":"1234", "nom":"Delune", "prenom":"Claire", "role":"je c pas", "ville":"montpellier", "adresse":"montpellier", "tel":"1234"}' localhost:8888/inscription

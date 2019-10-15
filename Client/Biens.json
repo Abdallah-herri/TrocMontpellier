@@ -1,0 +1,9 @@
+[
+	{
+		"idBien" : "1234",
+		"idmembre" : "1",
+		"nom" : "marteau",
+		"descriptif" : "marteau",
+		"PrixNeuf" : "50"
+	}
+]
